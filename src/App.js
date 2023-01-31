@@ -1,17 +1,21 @@
-import "./App.css";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home, Feed, Dashboard, Create } from "./pages"
+import Create from "./pages/create/Create";
+import Details from "./pages/details/details";
+import Home from "./pages/home/Home";
+import DialogBox from "./pages/Modal/Modal";
+import Modify from "./pages/Modify/Modify";
+import Search from "./pages/search/search";
+
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/employer" >
-          <Route path="/employer/dashboard" element={<Dashboard />}/>
-          <Route path="/employer/create" element={<Create />}/>
-          </Route>
-          <Route path="/employee/feed" element={<Feed />}/>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/adduser" element={<Create />} />
+          
+          <Route path="/userDetail" element={<Details />} />
       </Routes>
     </BrowserRouter>
   );

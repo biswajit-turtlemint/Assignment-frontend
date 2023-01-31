@@ -1,0 +1,17 @@
+.content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 11;
+}
+.button{
+    flex: 1;
+    margin-left: 40px;
+    
+}
